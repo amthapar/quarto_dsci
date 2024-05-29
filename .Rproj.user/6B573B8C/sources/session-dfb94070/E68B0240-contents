@@ -8,11 +8,14 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - new.qmd
       - chapter2.qmd
+      - tutorial3.qmd
+
 
 format:
   html:
-    theme: cosmo
+    theme: journal
     css: styles.css
     toc: true
 

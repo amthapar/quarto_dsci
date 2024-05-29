@@ -1,0 +1,49 @@
+---
+editor: visual
+---
+
+# Tutorial #3 {.unnumbered}
+
+In the previous two tutorials, we briefly reviewed how to write code in the `R console` and in `R scripts`. This tutorial focuses on using `RMarkdown` to produce rich, fully-documented, reproducible analyses. We will also cover how to set up your working environment, mathematical and logical operators, the most common data types in R, explore a simple dataset, write an R function as well as how to seek for help within and outside of R.
+
+## Intended Learning Outcomes {#sec-ilo-intro}
+
+\* Be able to create and knit an RMarkdown file.
+
+\* Be able to recognize and correct Common Errors from R
+
+\* Understand Coding Etiquette
+
+## RMarkdown {#sec-ilo-rmarkdown}
+
+R Markdown is a flexible type of document that allows you to seamlessly combine executable R code, and its output, with text in a single document. These documents can be easily converted to multiple static and dynamic output formats, including PDF (.pdf), Word (.docx), and HTML (.html).
+
+The benefit of a well-prepared R Markdown document is full reproducibility. It allows users to share a single file containing all of the comments, R code, and metadata needed to reproduce the analysis from beginning to end. This also means that, if you notice any errors, or you need to add more data to your analysis, you will be able to recompile the report without making any changes in the actual document.
+
+```{r rmarkdown, echo=F, fig.cap='Image credit: Alison Horst (https://allisonhorst.com/).', out.width='\\textwidth'}
+knitr::include_graphics('rstudio_screenshots/rmarkdown_wizards.png')
+```
+
+The rmarkdown package comes pre-installed with RStudio, so no action is necessary. We think you will be pleasantly surprised at how easy it is to write an RMarkdown document once you get the hang of it.
+
+::: callout-important
+## RMarkdown Resources
+
+In this tutorial, we provide brief instructions for creating a RMarkdown file. A more in-depth explanation of RMarkdown is here: [https://rmarkdown.rstudio.com](https://rmarkdown.rstudio.com){target="_blank"}, and a more detailed user guide is here: [https://rmarkdown.rstudio.com/lesson-1.html](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"}.
+:::
+
+SEE https://datacarpentry.org/r-socialsci/06-rmarkdown.html for RMarkdown details - CC4
+
+A typical R Markdown document consists of three distinct parts:
+
+A header for setting global document options;
+
+Text that may contain headings, paragraphs, and itemized lists; and
+
+Code chunks that contain and evaluate R code.
+
+Fortunately, the range of commands required to benefit from R Markdown is very limited. For instance, the commands in the help file Help \> Markdown Quick Reference of RStudio provide a good start for creating beautiful and functional documents. Beyond these basics, the R Markdown Cheatsheet --- also available in RStudio by selecting Help \> Cheatsheets \> R Markdown Cheat Sheet --- provides a more comprehensive overview of R Markdown functionality and commands:
+
+**Knitting** an R Markdown file causes all the R code to be run and the output from the code is put into a markdown file. The markdown file is then run to format the final document, this includes formatting the R code results. This all happens behind the scene. The working directory for these session is the folder that contains the R Markdown file.
+
+The chunks of code are where most of your development and testing time will be spent. All the code in chunk can be run using the Run Current Chunk button, a green triangle at the top right of the code chunk. All chunk before the current chunk using the Run All Chunks Above button, The gray triangle pointing down that is just to the left of Run Current Chunk button. Part of the code in a chunk can be run using the run drop down menu on the tool bar at the top of the source page.
