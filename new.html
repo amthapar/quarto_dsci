@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AT – new</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">AT</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./new.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Tutorial #1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chapter2.html" rel="" target="">
+ <span class="menu-text">Tutorial #2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tutorial3.html" rel="" target="">
+ <span class="menu-text">Tutorial #3</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tutorial-1" id="toc-tutorial-1" class="nav-link active" data-scroll-target="#tutorial-1">Tutorial #1</a>
+  <ul class="collapse">
+  <li><a href="#sec-ilo-intro" id="toc-sec-ilo-intro" class="nav-link" data-scroll-target="#sec-ilo-intro">Intended Learning Outcomes</a></li>
+  <li><a href="#sec-intro-rstudio_ide" id="toc-sec-intro-rstudio_ide" class="nav-link" data-scroll-target="#sec-intro-rstudio_ide">Introduction to R and RStudio</a>
+  <ul class="collapse">
+  <li><a href="#guided-tour-of-rstudio" id="toc-guided-tour-of-rstudio" class="nav-link" data-scroll-target="#guided-tour-of-rstudio">Guided Tour of RStudio</a></li>
+  <li><a href="#rstudio-menus" id="toc-rstudio-menus" class="nav-link" data-scroll-target="#rstudio-menus">Rstudio menus</a></li>
+  </ul></li>
+  <li><a href="#sec-intro-scripts" id="toc-sec-intro-scripts" class="nav-link" data-scroll-target="#sec-intro-scripts">Writing R Code</a>
+  <ul class="collapse">
+  <li><a href="#r-console" id="toc-r-console" class="nav-link" data-scroll-target="#r-console">R Console</a></li>
+  <li><a href="#r-scripts" id="toc-r-scripts" class="nav-link" data-scroll-target="#r-scripts">R Scripts</a></li>
+  </ul></li>
+  <li><a href="#sec-packages" id="toc-sec-packages" class="nav-link" data-scroll-target="#sec-packages">Packages and functions</a>
+  <ul class="collapse">
+  <li><a href="#sec-install-package" id="toc-sec-install-package" class="nav-link" data-scroll-target="#sec-install-package">Installing a package</a></li>
+  <li><a href="#loading-a-package" id="toc-loading-a-package" class="nav-link" data-scroll-target="#loading-a-package">Loading a package</a></li>
+  <li><a href="#using-a-function" id="toc-using-a-function" class="nav-link" data-scroll-target="#using-a-function">Using a function</a></li>
+  <li><a href="#sec-tidyverse" id="toc-sec-tidyverse" class="nav-link" data-scroll-target="#sec-tidyverse">Tidyverse</a></li>
+  <li><a href="#sec-function-help" id="toc-sec-function-help" class="nav-link" data-scroll-target="#sec-function-help">Function Help</a></li>
+  </ul></li>
+  <li><a href="#sec-intro-customize" id="toc-sec-intro-customize" class="nav-link" data-scroll-target="#sec-intro-customize">Customize your RStudio Interface</a>
+  <ul class="collapse">
+  <li><a href="#sec-intro-reproducibility" id="toc-sec-intro-reproducibility" class="nav-link" data-scroll-target="#sec-intro-reproducibility">Reproducibility</a></li>
+  <li><a href="#sec-intro-sessions" id="toc-sec-intro-sessions" class="nav-link" data-scroll-target="#sec-intro-sessions">Sessions</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="tutorial-1" class="level1 unnumbered">
+<h1 class="unnumbered">Tutorial #1</h1>
+<p>This tutorial focuses on getting you started in R and RStudio. R is a programming language that you will write code in and RStudio is a program that makes working in R easier. There are two strategies for working with R and RStudio. The user can either install R and RStudio on their computer and work with them <em>locally</em> OR the user can work with them <em>remotely</em> via an internet browser. In this course, we will work with R and RStudio remotely via <a href="https://posit.cloud/" target="_blank">PositCloud</a>.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Interested students can refer to Appendix A for technical details on installing R and RStudio locally on their computer. If you already have R and/or RStudio installed, we recommend updating to the latest version of R and RStudio. Appendix B has more details on how to do that.</p>
+</div>
+</div>
+</div>
+<section id="sec-ilo-intro" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ilo-intro">Intended Learning Outcomes</h2>
+<p>* Understand the difference between R and RStudio</p>
+<p>* Become familiar with the main components in RStudio</p>
+<p>* Be able to write and run code in the console and in a R Script</p>
+<p>* Be able to install add-on packages</p>
+<p>* Be able to get help for packages and functions</p>
+<p>* Be able to customize RStudio</p>
+</section>
+<section id="sec-intro-rstudio_ide" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intro-rstudio_ide">Introduction to R and RStudio</h2>
+<p>As previously mentioned, R is a programming language that we will use to write code for working with data. RStudio is an Integrated Development Environment (IDE) for R. RStudio is dependent on R but separate from it. It provides a useful interface for working with R and has several advantages over the default R interface. Think of it as knowing English and using a plain text editor like NotePad to write a book versus using a word processor like Microsoft Word. You could do it, but it would be much harder without things like spell-checking and formatting and you wouldn’t be able to use some of the advanced features that Word has developed. In a similar way, you can use R without RStudio but we wouldn’t recommend it. RStudio serves as a text editor, file manager, spreadsheet viewer, and much more. The key thing to remember is that although you will do all of your work using RStudio for this course, you are actually working with two pieces of software, which means that from time to time, both of them may have separate updates.</p>
+<p>RStudio runs on Mac, PC, and Linux machines and provides a simplified interface that looks and feels identical on all of them. While it can be installed on your own computer, for this course you will be asked to login to a shared RStudio Cloud server (<a href="https://posit.cloud/" target="_blank">PositCloud</a>) from a web browser. There are several advantages to using the web browser application of RStudio Cloud. It allows you to write and access R code wherever you go. It even works on your tablet because it does not require installation. It also makes it much easier to collaborate with others, and since no installation is required, you can work on projects on any device as long as you are connected to the internet. Another significant advantage of using RStudio in the cloud is that you can run time-consuming scripts without bogging down your own device. However, because RStudio Cloud requires an internet connection, it will run slower if your internet connection is not fast or stable.</p>
+<section id="guided-tour-of-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="guided-tour-of-rstudio">Guided Tour of RStudio</h3>
+<p>The interface for working with RStudio both in the cloud or locally is largely the same and consists of 4 window “panes”. Several of the panes are further subdivided into multiple tabs.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rstudio_screenshots/rstudio_layout.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">RStudio Layout with R script in upper left quadrant.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s look in more detail at each of these four windows. By default, the upper left pane is the <strong>source pane</strong>, where you view, write, and edit code from files and view data tables in a spreadsheet format. When you first open RStudio, this pane won’t display until we open a document or load in some data – don’t worry, we’ll get to that soon.</p>
+<p>The lower left pane is the <strong>console pane</strong>, where you can view the output of your coding and computations. It is also possible to write code directly into the console. However, keep in mind that the code you write in the console will run and can create objects that will be saved in the environment, but the code itself won’t be saved. You need to write your code into a script in the source pane to save it, which we’ll cover in more detail in <a href="#sec-intro-scripts">Section&nbsp;0.3</a> below.</p>
+<p>The right panes have several different tabs that show you information about your code. The most used tabs in the upper right pane is the <strong>Environment</strong> tab. The Environment tab lists some information about the <em>objects</em> that you have defined in your code.</p>
+<p>In the lower right pane are tabs for browsing files, viewing plots, managing R packages, reading help files, and for viewing html documents and presentations. The most used tabs are the <strong>Files</strong> tab for directory structure, the <strong>Plots</strong> tab for plots made in a script, the <strong>Packages</strong> tab for managing add-on packages (see <a href="#sec-packages">Section&nbsp;0.4</a>), and the <strong>Help</strong> tab which displays help pages for R functions and packages. We’ll learn more about the Help tab in <a href="#sec-function-help">Section&nbsp;0.4.5</a>.</p>
+</section>
+<section id="rstudio-menus" class="level3">
+<h3 class="anchored" data-anchor-id="rstudio-menus">Rstudio menus</h3>
+<p>At the top of the RStudio Desktop there are the following set of menus.</p>
+<dl>
+<dt>File</dt>
+<dd>
+<p>The File menu is primarily for the opening, closing and saving of files. Often, these files will be R scripts that open in the script editor. But they could also be R data file, RMarkdown documents, Shiny apps, etc. Here, we can also open and close RStudio <em>projects</em>, which is a very useful organizing feature to which we will return below.</p>
+</dd>
+<dt>Edit</dt>
+<dd>
+<p>The Edit menu primarily provides tools for standard file editing operations such as copy, cut, paste, and search and replace, undo and redo, etc. It also provides code folding features, which is very useful for reducing clutter when editing relatively large R scripts.</p>
+</dd>
+<dt>Code</dt>
+<dd>
+<p>The Code menu provides many useful tools for making editing and running code considerably easier and more efficient. We will explore these features in more depth in subsequent sections, but they include the adding and removing code comments, reformatting code, jumping to functions within and between scripts, creating code regions that can then be run independently, and so on.</p>
+</dd>
+<dt>View</dt>
+<dd>
+<p>The View menu primarily provides options to move around RStudio quickly. These options are all bound to key combinations, as are many other RStudio features, and learning these key combinations is certainly worthwhile because of the eventual speed and efficiency gains that they provide.</p>
+</dd>
+<dt>Plots</dt>
+<dd>
+<p>The Plots menu primarily provides features that are also available in the Plots window itself.</p>
+</dd>
+<dt>Session</dt>
+<dd>
+<p>The Session menu allows us to start new separate RStudio sessions. These then run independently of one another. Also in the Session menu, we can restart the R session in the background, which is a useful session. Remember that RStudio itself is just a front to an R session that runs in the background. Sometimes it is a good idea to restart the R session so as to start in a clean and fresh state. This can be done through the Session menu <em>Restart R</em> option, which is also bound to the keys Ctrl+Shift+F10. Also in Session are options to set R’s <em>working directory</em>. This concept of a working directory is a simple but important one, and we will cover it below.</p>
+</dd>
+<dt>Build</dt>
+<dd>
+<p>The Build menu provides features for running scripts for <em>software builds</em>. This is particularly used for creating R packages.</p>
+</dd>
+<dt>Debug</dt>
+<dd>
+<p>The Debug menu provides tools for debugging our R code. Debugging usually only becomes a necessity when R programming per se, and not something that is usually required when writing individual commands or scripts of commands.</p>
+</dd>
+<dt>Profile</dt>
+<dd>
+<p>The Profile menu provides tools for profiling the running and efficiency of our R code. Code efficiency is certainly not something that those new to R need to worry about, but when writing relatively complex code, profiling can identify bottlenecks.</p>
+</dd>
+<dt>Tools</dt>
+<dd>
+<p>The Tools menu provides miscellaneous tools such as for working with version control using Git, accessing the computer’s operating system’s command line interface, installing and updating packages (as could also be done in the Package window), viewing and modifying keyboard shortcuts. Here, we can also access the <em>Global Options</em> and <em>Project Options</em>. Global Options is where all the general R and RStudio settings are set. One immediately useful setting here is the <em>Appearance</em> setting, which can allow us to change the font, font size, and colour theme of RStudio to suit our preference. Project Options are for the RStudio project specific settings. We will return to these below.</p>
+</dd>
+<dt>Help</dt>
+<dd>
+<p>The Help menu provides much the same information as can be found in the Help window. It also provides some additional links to online resources, such as RStudio’s cheatsheets<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, which are excellent concise guides to many different R and RStudio topics. Also available in the Help menu are tools to access RStudio internal diagnostics. This is only that is needed if and when RStudio seems to be malfunctioning.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="sec-intro-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intro-scripts">Writing R Code</h2>
+<p>R is a command based system. We type commands, R translates them into machine instructions, which our computer then executes, and then we often, but not necessarily, get back some output. The commands can be typed into the R console, or else they can be put into a script and run as a batch.</p>
+<section id="r-console" class="level3">
+<h3 class="anchored" data-anchor-id="r-console">R Console</h3>
+<p>When learning R, it is usually best to start with typing commands in the R console. When we open RStudio initially, our console will usually look something like this:</p>
+<pre><code>R version 4.3.1 (2023-06-16 ucrt) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+&gt; </code></pre>
+<p>Notice that at the bottom, there is a single line beginning with <code>&gt;</code>. This is the R console’s command prompt, and it is where we type our commands. We then press Enter, and our command is executed. The output of the command, if any, is displayed on the next line or lines, and then a new <code>&gt;</code> prompt appears.</p>
+<p>While R is much more than a simple calculator, a useful way to familiarize yourself with R and the console is to do some simple calculator-like computations. Most of this will work just like you would expect from a typical calculator.</p>
+<p>First, click into the console with your mouse, type <strong>10 + 5</strong> into your console and press Enter/Return ↵ on your keyboard. The result should be pretty obvious. Now, type <strong>6 * 15</strong> into your console and press Enter/Return ↵ on your keyboard. Next, type <strong>sqrt(25)</strong> into your console and press Enter/Return ↵ on your keyboard. This last example demonstrates how functions are called within R. The code <strong>sqrt()</strong> calls the square root function in R and asks R to compute the square root of the number provided within the parentheses. Now, type <strong>calc1 &lt;- sqrt(25)</strong> into your console and hit Enter/Return. This time R does not return a value but instead has stored the value in memory by <em>assigning</em> it to a variable. We do this with the <em>assignment operator</em> <code>&lt;-</code>, which is a <code>&lt;</code> symbol followed directly by a <code>-</code> symbol. The <code>&lt;-</code> can be typed by key combination <strong>Alt+-</strong> (i.e Alt key and minus key together) or <strong>Option+-</strong> on the Mac. This object is now listed in your Environment pane. Type <strong>calc1</strong> into your console and press Enter/Return ↵ on your keyboard, to print the value saved in the object. <em>Quick Note: In the previous commands, we put a space between around the <code>+</code>, <code>*</code>, <code>&lt;-</code> operators. This is a matter of recommended style to improve readability, not a requirement.</em></p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Broom to the Rescue
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the top right of the console pane, you will find a symbol that looks like a broom. This is quite an important icon because it clears your console. Sometimes the console can become very cluttered and difficult to read. When you want to declutter your console, click the broom icon and clear the console of all text. I use it so frequently that I strongly recommend learning the keyboard shortcut, which is <strong>Ctrl + L</strong> on PC and Mac.</p>
+</div>
+</div>
+</section>
+<section id="r-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="r-scripts">R Scripts</h3>
+<p>Rather than typing R commands into the Console, we typically write short programs, known as “R scripts” that contain the R commands that we wish to execute. This allows for reproducibility because everytime you run your R script you’ll get the same result (assuming the input is the same) or you could give your script to someone else and they’ll get the same result as well.</p>
+<p>To create a new R Script, select File, then New File, then R Script from the RStudio menu. A file editor tab will open in the Source panel. R code can be entered here, and buttons and menu items are provided to run all the code (called sourcing the file) or to run the code on a single line or in a selected section of the file.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rstudio_screenshots/FileNewR.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Creating a new R Script.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Next, type the following three lines of commands into your R script or copy and paste the code into your R script and update the code with your responses:</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Type the code in the R Script file. Ignore the numbers listed to the left of the code.</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>myname <span class="ot">&lt;-</span> <span class="st">"Your Name"</span>   </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>myfavfood <span class="ot">&lt;-</span> <span class="st">"Name of your Favorite Food"</span>  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"My name is"</span>, myname, <span class="st">"and I really like to eat"</span>, myfavfood)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>You may now run each line of your script by clicking on the RUN button, or by pressing the <strong>Ctrl + Enter (Cmd + Enter for Macs)</strong> keys simultaneously. Notice that R will continue to provide the output in the console, but pressing Enter by itself doesn’t make R run any command.</p>
+<p>Let’s save your first R script. Select File, then Save to give your script a name and save it in your working directory. Congratulations! You have created and saved your first R Script file.</p>
+</section>
+</section>
+<section id="sec-packages" class="level2">
+<h2 class="anchored" data-anchor-id="sec-packages">Packages and functions</h2>
+<p>When you install R you will have access to a range of <em>functions</em> including options for <em>data wrangling</em> and statistical analysis. The functions that are included in the default installation are typically referred to as <strong>“base R”</strong> and you can think of them like the default apps that come pre-loaded on your phone.</p>
+<p>One of the great things about R, however, is that it is <strong>user extensible</strong>: anyone can create a new add-on that extends its functionality. There are currently thousands of <em>packages</em> that R users have created to solve many different kinds of problems, or just simply to have fun. For example, there are packages for data visualization, machine learning, interactive dashboards, web scraping, and playing games such as Sudoku.</p>
+<p>Add-on packages are not distributed with base R, but have to be downloaded and installed from an archive, in the same way that you would, for instance, download and install PokemonGo on your smartphone. The main repository where packages reside is called <strong>CRAN</strong>`, the Comprehensive R Archive Network.</p>
+<p>There is an important distinction between <strong>installing</strong> a package and <strong>loading</strong> a package.</p>
+<section id="sec-install-package" class="level3">
+<h3 class="anchored" data-anchor-id="sec-install-package">Installing a package</h3>
+<p>This is done using the function <code>install.packages()</code>. This is like installing an app on your phone: you only have to do it once and the app will remain installed until you remove it. For instance, if you want to use PokemonGo on your phone, you install it once from the App Store or Play Store; you don’t have to re-install it each time you want to use it. Once you launch the app, it will run in the background until you close it or restart your phone. Likewise, when you install a package, the package will be available (but not <em>loaded</em>) every time you open up R.</p>
+<p>Install the <pkg>dslabs</pkg> package on your system. This package contains 26 different datasets and we will explore some of these datasets over the next few weeks.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Type the code below in the console. Ignore the number listed to the left of the code.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dslabs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Install packages from the console only
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Never install a package from inside a script. Only do this from the console pane or the packages tab of the lower right pane.</p>
+</div>
+</div>
+<p>Here are some other packages you’ll want to install for the first two chapters.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Type the code below in the console. Ignore the number listed to the left of the code.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"beepr"</span>) <span class="co"># for beeps</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>) <span class="co"># for creating R markdown files</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)  <span class="co"># for installing packages from github</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>The hash (#) marks everything to the right of it as comment. Using comments can be very useful for annotating your code, and it improves the readability too. It will also help you to remember why/what you done months later, when you return to your code that you have inevitably forgotten!</p>
+<p>Once you’ve installed the <pkg>devtools</pkg> package, you can also install packages from repositories other than CRAN, such as github. The following code installs the development version of a package for making waffle plots.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install waffle package. Ignore the number listed to the left of the code.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"hrbrmstr/waffle"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="loading-a-package" class="level3">
+<h3 class="anchored" data-anchor-id="loading-a-package">Loading a package</h3>
+<p>This is done using the <code>library()</code> function. This is like <strong>launching</strong> an app on your phone: the functionality is only there when the app is launched and remains there until you close the app or restart RStudio. For example, when you run <code>library(devtools)</code> within a session, the functions in the package referred to by <code>devtools</code> will be made available for your R session. The next time you start RStudio, you will need to run <code>library(devtools)</code> again if you want to access that package.</p>
+<p>After installing the <pkg>beepr</pkg> package, you can load it for your current R session as follows:</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(beepr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>You might get some red text when you load a package, this is normal. It is usually warning you that this package has functions that have the same name as other packages you’ve already loaded.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can use the convention <code>package::function()</code> to indicate in which add-on package a function resides. For instance, if you see <code>readr::read_csv()</code>, that refers to the function <code>read_csv()</code> in the {readr} add-on package. If the package is loaded using <code>library()</code>, you don’t have to specify the package name before a function unless there is a <strong>conflict</strong> (e.g., you have two packages loaded that have a function with the same name).</p>
+</div>
+</div>
+</section>
+<section id="using-a-function" class="level3">
+<h3 class="anchored" data-anchor-id="using-a-function">Using a function</h3>
+<p>Now you can run the function <code>beep()</code>.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">beep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>A <code>function</code> is a name that refers to some code you can reuse. We’ll start by using functions that are provided for you in packages, but you can also write your own functions. After the function name, there is a pair of parentheses, which contain zero or more <code>arguments</code>. These are options that you can set. In the example above, the <code>sound</code> argument has a <code>default value</code> of <code>1</code>, which makes a “ping” sound. Try changing the argument to an integer between 1 and 11.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">beep</span>(<span class="at">sound =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="sec-tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="sec-tidyverse">Tidyverse</h3>
+<p>We have pre-installed the course workspace with the package <pkg>tidyverse</pkg>. This is the main package we will use throughout this course for data wrangling, summaries, and visualization.</p>
+<p><pkg>tidyverse</pkg> is a meta-package that loads several packages we’ll be using in almost every chapter in this book:</p>
+<ul>
+<li><pkg>ggplot2</pkg>, for data visualisation (<strong>?@sec-viz</strong>)</li>
+<li><pkg>readr</pkg>, for data import (<strong>?@sec-data</strong>)</li>
+<li><pkg>tibble</pkg>, for tables (<strong>?@sec-data</strong>)</li>
+<li><pkg>tidyr</pkg>, for data tidying (<strong>?@sec-tidy</strong>)</li>
+<li><pkg>dplyr</pkg>, for data manipulation (<strong>?@sec-wrangle</strong>)</li>
+<li><pkg>stringr</pkg>, for string data</li>
+<li><pkg>forcats</pkg>, for categorical data</li>
+<li><pkg>purrr</pkg>, for repeating things</li>
+</ul>
+<p>When you install <pkg>tidyverse</pkg>, it also installs some other useful packages that you can load individually. You can get the full list using <code>tidyverse_packages()</code>, but the packages we’ll be using in this book are:</p>
+<ul>
+<li><pkg>googlesheets4</pkg>, for working with Google spreadsheets</li>
+<li><pkg>readxl</pkg>, for Excel files</li>
+<li><pkg>lubridate</pkg>, for working with dates</li>
+<li><pkg>hms</pkg>, for working with times</li>
+<li><pkg>rvest</pkg>, for web scraping</li>
+</ul>
+</section>
+<section id="sec-function-help" class="level3">
+<h3 class="anchored" data-anchor-id="sec-function-help">Function Help</h3>
+<p>When you load the <pkg>tidyverse</pkg> it automatically loads all of the above packages, however, it can be helpful to know which package a function comes from if you need to Google it.</p>
+<p>If the package isn’t loaded, use <code>?package_name::function_name</code> or specify the package in the <code>help()</code> function. When you aren’t sure what package the function is in, use the shortcut <code>??function_name</code>.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Run in the console</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if the package is loaded</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>?beepr</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"beepr"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># works whether or not the package is loaded</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>?beepr<span class="sc">::</span>beep</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"beep"</span>, <span class="at">package=</span><span class="st">"beepr"</span>) </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># shows a list of potentially matching functions</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>??beep</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-intro-customize" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intro-customize">Customize your RStudio Interface</h2>
+<p>You can customize how RStudio looks to make it work for you. For example, you can adjust the size of the panes by moving the gray lines which separate the four panes. The panes can be minimized or maximized using the icons on the right side of the gray bar at the the top of each pane. You also can change the location of panes and what tabs are shown under <if>Tools &gt; Global Options… &gt; Pane Layout</if>.</p>
+<p>More importantly, you can change the default font, font size, and general appearance of R Studio, including it’s color scheme. Click <if>Tools &gt; Global Options &gt; Appearance</if>. Play around with the settings and see what you prefer - you’re going to spend a lot of time with RStudio, it might as well look nice!</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="rstudio_screenshots/rstudio_appearance.png" class="img-fluid"></p>
+</div>
+</div>
+<section id="sec-intro-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="sec-intro-reproducibility">Reproducibility</h3>
+<p>Over the semester, you will be learning how to make reproducible reports using <pkg>rmarkdown</pkg>. This involves writing scripts that transform data, create summaries and visualizations, and embed them in a report in a way that always provides the same results. We will go into more details about RMarkdown in the next tutorial.</p>
+<p>When you do things reproducibly, others (and most importantly future you) can understand and check your work. You can also reuse your work more easily. For example, if you need to create a report every month with the social media analytics for your company, a reproducible report allows you to download a new month’s data and create the report within seconds. It might take a little longer to set up the report in the first instance with reproducible methods, but the time it saves you in the long run is invaluable.</p>
+<p>https://bookdown.org/daniel_dauber_io/r4np_book/setting-up-r-and-rstudio.html#when-you-first-start-rstudio</p>
+<p>We recommend that you make the following changes to your RStudio settings to set yourself up for success right from the beginning. To open the Rstudio settings you have to click on</p>
+<p><code>RStudio &gt; Tools &gt; Global Options or press ⌘ + , if you are on a Mac.</code></p>
+<p><code>RStudio &gt; Tools &gt; Global Options or press Ctrl + , if you work on a Windows computer.</code></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="rstudio_screenshots/rstudio_settings_basic.png" class="img-fluid"></p>
+</div>
+</div>
+<p>On the first tab, i.e.&nbsp;<code>General &gt; Basic</code>, we should make one of the most significant changes. Deactivate every option that starts with <code>Restore</code>. This will ensure that every time you start RStudio, you begin with a clean slate. At first sight, it might sound counter-intuitive not to restart everything where you left off, but it is essential to make all your projects easily reproducible. Furthermore, if you work together with others, not restoring your personal settings also ensures that your programming works across different computers. Therefore, I recommend having the following unticked:</p>
+<p><code>Restore most recently opened project at startup</code>,</p>
+<p><code>Restore previously open source documents at startup</code>,</p>
+<p><code>Restore .Rdata into workspace at startup</code></p>
+<p>In the same tab under <code>Workspace</code>, select <code>Never</code> for the setting <code>Save workspace to .RData on exit</code>. One might think it is wise to keep intermediary results stored from one R session to another. However, I often found myself fixing issues due to this lazy method, and my code became less reliable and, therefore, reproducible. With experience, you will find that this avoids many headaches.</p>
+<p>In the <code>Code &gt; Editing</code> tab, make sure to have at least the first five options ticked, especially the <code>Auto-indent code after paste</code>. This setting will save time when trying to format your coding appropriately, making it easier to read. Indentation is the primary way of making your code look more readable and less like a series of characters that appear almost random.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="rstudio_screenshots/rstudio_editing.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="sec-intro-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="sec-intro-sessions">Sessions</h3>
+<p>If you have the above settings configured correctly, when you open up RStudio and start writing code, loading packages, and creating objects, you will be doing so in a new session and your Environment tab should be completely empty. If you find that your code isn’t working and you can’t figure out why, it might be worth restarting your R session. This will clear the environment and detach all loaded packages - think of it like restarting your phone. There are several ways that you can restart R:</p>
+<ul>
+<li>Menu: <if>Session &gt; Restart R</if></li>
+<li><mac>Cmd-Shift-F10</mac> or <pc>Ctl-Shift-F10</pc></li>
+<li>type <code>.rs.restartR()</code> in the console</li>
+</ul>
+<p>Try doing each of these now. Additionally, doing so prior to running any new R script is good practice because it ensures that our script will not have any hidden dependencies, and that any data structures or functions that the code does depend on are created from the code contained in the script.</p>
+
+
+</section>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>https://www.rstudio.com/resources/cheatsheets/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

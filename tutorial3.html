@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AT</title>
+<title>AT – tutorial3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -115,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -131,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Tutorial #2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tutorial3.html" rel="" target="">
+    <a class="nav-link active" href="./tutorial3.html" rel="" target="" aria-current="page">
  <span class="menu-text">Tutorial #3</span></a>
   </li>  
 </ul>
@@ -146,38 +112,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tutorial-3" id="toc-tutorial-3" class="nav-link active" data-scroll-target="#tutorial-3">Tutorial #3</a>
+  <ul class="collapse">
+  <li><a href="#sec-ilo-intro" id="toc-sec-ilo-intro" class="nav-link" data-scroll-target="#sec-ilo-intro">Intended Learning Outcomes</a></li>
+  <li><a href="#sec-ilo-rmarkdown" id="toc-sec-ilo-rmarkdown" class="nav-link" data-scroll-target="#sec-ilo-rmarkdown">RMarkdown</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">AT</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<section id="tutorial-3" class="level1 unnumbered">
+<h1 class="unnumbered">Tutorial #3</h1>
+<p>In the previous two tutorials, we briefly reviewed how to write code in the <code>R console</code> and in <code>R scripts</code>. This tutorial focuses on using <code>RMarkdown</code> to produce rich, fully-documented, reproducible analyses. We will also cover how to set up your working environment, mathematical and logical operators, the most common data types in R, explore a simple dataset, write an R function as well as how to seek for help within and outside of R.</p>
+<section id="sec-ilo-intro" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ilo-intro">Intended Learning Outcomes</h2>
+<p>* Be able to create and knit an RMarkdown file.</p>
+<p>* Be able to recognize and correct Common Errors from R</p>
+<p>* Understand Coding Etiquette</p>
+</section>
+<section id="sec-ilo-rmarkdown" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ilo-rmarkdown">RMarkdown</h2>
+<p>R Markdown is a flexible type of document that allows you to seamlessly combine executable R code, and its output, with text in a single document. These documents can be easily converted to multiple static and dynamic output formats, including PDF (.pdf), Word (.docx), and HTML (.html).</p>
+<p>The benefit of a well-prepared R Markdown document is full reproducibility. It allows users to share a single file containing all of the comments, R code, and metadata needed to reproduce the analysis from beginning to end. This also means that, if you notice any errors, or you need to add more data to your analysis, you will be able to recompile the report without making any changes in the actual document.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rstudio_screenshots/rmarkdown_wizards.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image credit: Alison Horst (https://allisonhorst.com/).</figcaption>
+</figure>
 </div>
 </div>
+</div>
+<p>The rmarkdown package comes pre-installed with RStudio, so no action is necessary. We think you will be pleasantly surprised at how easy it is to write an RMarkdown document once you get the hang of it.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+RMarkdown Resources
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this tutorial, we provide brief instructions for creating a RMarkdown file. A more in-depth explanation of RMarkdown is here: <a href="https://rmarkdown.rstudio.com" target="_blank">https://rmarkdown.rstudio.com</a>, and a more detailed user guide is here: <a href="https://rmarkdown.rstudio.com/lesson-1.html" target="_blank">https://rmarkdown.rstudio.com/lesson-1.html</a>.</p>
+</div>
+</div>
+<p>SEE https://datacarpentry.org/r-socialsci/06-rmarkdown.html for RMarkdown details - CC4</p>
+<p>A typical R Markdown document consists of three distinct parts:</p>
+<p>A header for setting global document options;</p>
+<p>Text that may contain headings, paragraphs, and itemized lists; and</p>
+<p>Code chunks that contain and evaluate R code.</p>
+<p>Fortunately, the range of commands required to benefit from R Markdown is very limited. For instance, the commands in the help file Help &gt; Markdown Quick Reference of RStudio provide a good start for creating beautiful and functional documents. Beyond these basics, the R Markdown Cheatsheet — also available in RStudio by selecting Help &gt; Cheatsheets &gt; R Markdown Cheat Sheet — provides a more comprehensive overview of R Markdown functionality and commands:</p>
+<p><strong>Knitting</strong> an R Markdown file causes all the R code to be run and the output from the code is put into a markdown file. The markdown file is then run to format the final document, this includes formatting the R code results. This all happens behind the scene. The working directory for these session is the folder that contains the R Markdown file.</p>
+<p>The chunks of code are where most of your development and testing time will be spent. All the code in chunk can be run using the Run Current Chunk button, a green triangle at the top right of the code chunk. All chunk before the current chunk using the Run All Chunks Above button, The gray triangle pointing down that is just to the left of Run Current Chunk button. Part of the code in a chunk can be run using the run drop down menu on the tool bar at the top of the source page.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

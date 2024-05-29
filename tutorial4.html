@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AT - tutorial4.qmd</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">AT</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./new.html" rel="" target="">
+ <span class="menu-text">Tutorial #1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chapter2.html" rel="" target="">
+ <span class="menu-text">Tutorial #2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tutorial3.html" rel="" target="">
+ <span class="menu-text">Tutorial #3</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tutorial-4" id="toc-tutorial-4" class="nav-link active" data-scroll-target="#tutorial-4">Tutorial #4</a>
+  <ul class="collapse">
+  <li><a href="#sec-intro-errors" id="toc-sec-intro-errors" class="nav-link" data-scroll-target="#sec-intro-errors">Errors, warnings, and messages</a></li>
+  <li><a href="#sec-intro-tips_coding" id="toc-sec-intro-tips_coding" class="nav-link" data-scroll-target="#sec-intro-tips_coding">Tips on learning to code</a></li>
+  <li><a href="#unused-text" id="toc-unused-text" class="nav-link" data-scroll-target="#unused-text">Unused Text</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">tutorial4.qmd</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="tutorial-4" class="level1 unnumbered">
+<h1 class="unnumbered">Tutorial #4</h1>
+<p>#Type the code below in the console. Ignore the number listed to the left of the code.</p>
+<p>* Be able to explore a dataset using basic Base R functions.</p>
+<p>* Be able to recognize and correct Common Errors from R</p>
+<p>* Understand Coding Etiquette</p>
+<section id="sec-intro-errors" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intro-errors">Errors, warnings, and messages</h2>
+<p>One thing that intimidates new R and RStudio users is how it reports errors, warnings, and messages. R reports errors, warnings, and messages in a glaring red font, which makes it seem like it is scolding you. However, seeing red text in the console is not always bad.</p>
+<p>R will show red text in the console pane in three different situations:</p>
+<p>Errors: When the red text is a legitimate error, it will be prefaced with “Error in…” and will try to explain what went wrong. Generally when there’s an error, the code will not run. For example, we’ll see in Subsection 1.3.3 if you see Error in ggplot(…) : could not find function “ggplot”, it means that the ggplot() function is not accessible because the package that contains the function (ggplot2) was not loaded with library(ggplot2). Thus you cannot use the ggplot() function without the ggplot2 package being loaded first. Warnings: When the red text is a warning, it will be prefaced with “Warning:” and R will try to explain why there’s a warning. Generally your code will still work, but with some caveats. For example, you will see in Chapter 2 if you create a scatterplot based on a dataset where two of the rows of data have missing entries that would be needed to create points in the scatterplot, you will see this warning: Warning: Removed 2 rows containing missing values (geom_point). R will still produce the scatterplot with all the remaining non-missing values, but it is warning you that two of the points aren’t there. Messages: When the red text doesn’t start with either “Error” or “Warning”, it’s just a friendly message. You’ll see these messages when you load R packages in the upcoming Subsection 1.3.2 or when you read data saved in spreadsheet files with the read_csv() function as you’ll see in Chapter 4. These are helpful diagnostic messages and they don’t stop your code from working. Additionally, you’ll see these messages when you install packages too using install.packages() as discussed in Subsection 1.3.1. Remember, when you see red text in the console, don’t panic. It doesn’t necessarily mean anything is wrong. Rather:</p>
+<p>If the text starts with “Error”, figure out what’s causing it. Think of errors as a red traffic light: something is wrong! If the text starts with “Warning”, figure out if it’s something to worry about. For instance, if you get a warning about missing values in a scatterplot and you know there are missing values, you’re fine. If that’s surprising, look at your data and see what’s missing. Think of warnings as a yellow traffic light: everything is working fine, but watch out/pay attention. Otherwise, the text is just a message. Read it, wave back at R, and thank it for talking to you. Think of messages as a green traffic light: everything is working fine and keep on going!</p>
+</section>
+<section id="sec-intro-tips_coding" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intro-tips_coding">Tips on learning to code</h2>
+<p>Learning to code/program is quite similar to learning a foreign language. It can be daunting and frustrating at first. Such frustrations are common and it is normal to feel discouraged as you learn. However, just as with learning a foreign language, if you put in the effort and are not afraid to make mistakes, anybody can learn and improve.</p>
+<p>Here are a few useful tips to keep in mind as you learn to program:</p>
+<p>Remember that computers are not actually that smart: You may think your computer or smartphone is “smart,” but really people spent a lot of time and energy designing them to appear “smart.” In reality, you have to tell a computer everything it needs to do. Furthermore, the instructions you give your computer can’t have any mistakes in them, nor can they be ambiguous in any way. Take the “copy, paste, and tweak” approach: Especially when you learn your first programming language or you need to understand particularly complicated code, it is often much easier to take existing code that you know works and modify it to suit your ends. This is as opposed to trying to type out the code from scratch. We call this the “copy, paste, and tweak” approach. So early on, we suggest not trying to write code from memory, but rather take existing examples we have provided you, then copy, paste, and tweak them to suit your goals. After you start feeling more confident, you can slowly move away from this approach and write code from scratch. Think of the “copy, paste, and tweak” approach as training wheels for a child learning to ride a bike. After getting comfortable, they won’t need them anymore. The best way to learn to code is by doing: Rather than learning to code for its own sake, we find that learning to code goes much smoother when you have a goal in mind or when you are working on a particular project, like analyzing data that you are interested in and that is important to you. Practice is key: Just as the only method to improve your foreign language skills is through lots of practice and speaking, the only method to improving your coding skills is through lots of practice. Don’t worry, however, we’ll give you plenty of opportunities to do so!</p>
+</section>
+<section id="unused-text" class="level2">
+<h2 class="anchored" data-anchor-id="unused-text">Unused Text</h2>
+<p>Everything that exists in R must be represented somehow. A generic term for something that we know not much about is an object. In R, we can distinguish between two main types of objects:</p>
+<ol type="1">
+<li><p><strong>data objects</strong> are typically passive containers for values (e.g., numbers, truth values, or strings of text), whereas</p></li>
+<li><p><strong>function objects</strong> are active elements or tools: They do things with data.</p></li>
+</ol>
+<p>Mastering R (or any other programming language) essentially consists of solving two inter-related tasks:</p>
+<ol type="1">
+<li><p>Representing various types of data as objects.</p></li>
+<li><p>Manipulating those objects by using functions.</p></li>
+</ol>
+<p>For any data object, we distinguish between its type and its shape. The shape of an object mostly depends on its structure. As this chapter uses only a single data structure (i.e., vectors), we will address issues of data shape later (in Chapter 3 on Data structures).</p>
+<p>Here, we focus on data types (which are also described as data modes in R). Throughout this book, we will work with the following data types:</p>
+<p>logical values (aka. Boolean values, of type logical) numbers (of type integer or double) text or string data (of type character) dates and times (with various data types)</p>
+<p>We already defined objects of type “integer”, “double”, “character” and “logical” above.</p>
+<p>Functions</p>
+<p>In general, we need to use parentheses to evaluate a function. If you type ls, the function is not evaluated and instead R shows you the code that defines the function. If you type ls() the function is evaluated and, as seen above, we see objects in the workspace.</p>
+<p>Unlike ls, most functions require one or more arguments. Below is an example of how we assign an object to the argument of the function log. Remember that we earlier defined a to be 1:</p>
+<p>TEST - DID THIS WORK</p>
+<p>Here is the material for this chapter</p>
+<p>R Basics</p>
+<p>Function help is always organised in the same way. For example, look at the help for `?beepr::beep`. At the top, it tells you the name of the function and its package in curly brackets, then a short description of the function, followed by a longer description. The **Usage** section shows the function with all of its `r glossary(“argument”, “arguments”)`. If any of those arguments have default values, they will be shown like `function(arg = default)`. The **Arguments** section lists each argument with an explanation. There may be a **Details** section after this with even more detail about the functions. The **Examples** section is last, and shows examples that you can run in your console window to see how the function works.</p>
+<div class="try callout callout-style-default callout-note callout-titled" style="clear: both;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>## Function Help</p>
+<p>- What is the first argument to the `mean` function? `r mcq(c(“trim”, “na.rm”, “mean”, answer=“x”))`</p>
+<p>- What package is `read_excel` in? `r mcq(c(“readr”, answer=“readxl”, “base”, “stats”))`</p>
+</div>
+</div>
+<p>### Arguments</p>
+<p>You can look up the arguments/options that a function has by using the help documentation. Some arguments are required, and some are optional. Optional arguments will often use a default (normally specified in the help documentation) if you do not enter any value.</p>
+<p>As an example, look at the help documentation for the function `sample()` which randomly samples items from a list.</p>
+<p>```{r help-doc, eval=FALSE, filename = “Run in the console”}</p>
+<p>?sample</p>
+<p>```</p>
+<p>The help documentation for `sample()` should appear in the bottom right help panel. In the usage section, we see that `sample()` takes the following form:</p>
+<p>```{r arguments, eval = FALSE}</p>
+<p>sample(x, size, replace = FALSE, prob = NULL)</p>
+<p>```</p>
+<p>In the arguments section, there are explanations for each of the arguments. `x` is the list of items we want to choose from, `size` is the number of items we want to choose, `replace` is whether or not each item may be selected more than once, and `prob` gives the probability that each item is chosen. In the details section it notes that if no values are entered for `replace` or `prob` it will use defaults of `FALSE` (each item can only be chosen once) and `NULL` (all items will have equal probability of being chosen). Because there is no default value for `x` or `size`, they must be specified otherwise the code won’t run.</p>
+<p>Let’s try an example and just change the required arguments to `x` and `size` to ask R to choose 5 random letters (`letters` is a built-in `r glossary(“vector”)` of the 26 lower-case Latin letters).</p>
+<p>```{r, echo = FALSE}</p>
+<p># make sure values are the same</p>
+<p>set.seed(1242016)</p>
+<p>```</p>
+<p>```{r rnorm-n}</p>
+<p>sample(x = letters, size = 5)</p>
+<p>```</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>## Why are my letters different to your letters?</p>
+<p>`sample()` generates a random sample. Each time you run the code, you’ll generate a different set of random letters (try it). The function `set.seed()` controls the random number generator - if you’re using any functions that use randomness (such as `sample()`), running `set.seed()` will ensure that you get the same result (in many cases this may not be what you want to do). To get the same numbers we do, run `set.seed(1242016)` in the console, and then run `sample(x = letters, size = 5)` again.</p>
+</div>
+</div>
+</div>
+<p>Now we can change the default value for the `replace` argument to produce a set of letters that is allowed to have duplicates.</p>
+<p>```{r}</p>
+<p>set.seed(8675309)</p>
+<p>sample(x = letters, size = 5, replace = TRUE)</p>
+<p>```</p>
+<p>This time R has still produced 5 random letters, but now this set of letters has two instances of “k”. Always remember to use the help documentation to help you understand what arguments a function requires.</p>
+<p>### Argument names</p>
+<p>In the above examples, we have written out the argument names in our code (i.e., `x`, `size`, `replace`), however, this is not strictly necessary. The following two lines of code would both produce the same result (although each time you run `sample()` it will produce a slightly different result, because it’s random, but they would still work the same):</p>
+<p>```{r argument-names, eval = FALSE}</p>
+<p>sample(x = letters, size = 5, replace = TRUE)</p>
+<p>sample(letters, 5, TRUE)</p>
+<p>```</p>
+<p>Importantly, if you do not write out the argument names, R will use the default order of arguments. That is, for `sample` it will assume that the first value you enter is `x`, the second value is `size` and the third value is `replace`.</p>
+<p>If you write out the argument names, then you can write the arguments in whatever order you like:</p>
+<p>```{r argument-order, eval = FALSE}</p>
+<p>sample(size = 5, replace = TRUE, x = letters)</p>
+<p>```</p>
+<p>When you are first learning R, you may find it useful to write out the argument names as it can help you remember and understand what each part of the function is doing. However, as your skills progress you may find it quicker to omit the argument names and you will also see code examples online that do not use argument names, so it is important to be able to understand which argument each bit of code is referring to (or look up the help documentation to check).</p>
+<p>In this course, we will always write out the argument names the first time we use each function. However, in subsequent uses they may be omitted.</p>
+<p>### Tab auto-complete</p>
+<p>One very useful feature of R Studio is tab auto-complete for functions. If you write the name of the function and then press the tab key, R Studio will show you the arguments that function takes along with a brief description. If you press enter on the argument name it will fill in the name for you, just like auto-complete on your phone. This is incredibly useful when you are first learning R and you should remember to use this feature frequently.</p>
+<p>```{r fig-autocomplete, echo=FALSE, fig.cap=“Tab auto-complete”}</p>
+<p>#knitr::include_graphics(“images/intro/autocomplete.png”)</p>
+<p>```</p>
+<p>## Objects {#sec-objects}</p>
+<p>A large part of your coding will involve creating and manipulating objects. Objects contain stuff. That stuff can be numbers, words, or the result of operations and analyses. You assign content to an object using `&lt;-`.</p>
+<p>Run the following code in the console, but change the values of `name` and `age` to your own details and change `christmas` to a holiday or date you care about.</p>
+<p>```{r objects, filename = “Run in the console”}</p>
+<p>name &lt;- “Emily”</p>
+<p>age &lt;- 36</p>
+<p>today &lt;- Sys.Date()</p>
+<p>christmas &lt;- as.Date(“2023-12-25”)</p>
+<p>```</p>
+<p>You’ll see that four objects now appear in the environment pane:</p>
+<p>- `name` is `r glossary(“character”)` (text) data. In order for R to recognise it as text, it **must** be enclosed in double quotation marks `” “`.</p>
+<p>- `age` is `r glossary(“numeric”)` data. In order for R to recognise this as a number, it **must not** be enclosed in quotation marks.</p>
+<p>- `today` stores the result of the function `Sys.Date()`. This function returns your computer system’s date. Unlike `name` and `age`, which are hard-coded (i.e., they will always return the values you enter), the contents of the object `today` will change dynamically with the date. That is, if you run that function tomorrow, it will update the date to tomorrow’s date.</p>
+<p>- `christmas` is also a date but it’s hard-coded as a specific date. It’s wrapped within the `as.Date()` function that tells R to interpret the character string you provide as a date rather than text.</p>
+<div class="try callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To print the contents of an object, type the object’s name in the console and press enter. Try printing all four objects now.</p>
+</div>
+</div>
+<p>Finally, a key concept to understand is that objects can interact and you can save the results of those interactions in new object. Edit and run the following code to create these new objects, and then print the contents of each new object.</p>
+<p>```{r intro-objects, filename = “Run in the console”}</p>
+<p>decade &lt;- age + 10</p>
+<p>full_name &lt;- paste(name, “Nordmann”)</p>
+<p>how_long &lt;- christmas - today</p>
+<p>```</p>
+<p>## Getting help {#sec-help}</p>
+<p>You will feel like you need a *lot* of help when you’re starting to learn. This won’t really go away; it’s impossible to memorise everything. The goal is to learn enough about the structure of R that you can look things up quickly. This is why we’ll introduce specialised jargon in the glossary for each chapter; it’s easier to google “convert `r glossary(”character”)` to `r glossary(“numeric”)` in R” than “make numbers in quotes be actual numbers not words”. In addition to the function help described above, here’s some additional resources you should use often.</p>
+<p>### Package reference manuals</p>
+<p>Start up help in a browser by entering `help.start()` in the console. Click on &lt;if&gt;Packages&lt;/if&gt; under &lt;if&gt;Reference&lt;/if&gt; to see a list of packages. Scroll down to the &lt;pkg&gt;readxl&lt;/pkg&gt; package and click on it to see a list of the functions that are available in that package.</p>
+<p>### Googling</p>
+<p>If the function help doesn’t help, or you’re not even sure what function you need, try Googling your question. It will take some practice to be able to use the right jargon in your search terms to get what you want. It helps to put “R” or “tidyverse” in the search text, or the name of the relevant package, like “ggplot2”.</p>
+<p>### Vignettes</p>
+<p>Many packages, especially [tidyverse](https://www.tidyverse.org/packages/){target=“_blank”} ones, have helpful websites with vignettes explaining how to use their functions. Some of the vignettes are also available inside R. You can access them from a package’s help page or with the `vignette()` function.</p>
+<p>```{r, eval = FALSE, filename = “Run in the console”}</p>
+<p># opens a list of available vignettes</p>
+<p>vignette(package = “ggplot2”)</p>
+<p># opens a specific vignette in the Help pane</p>
+<p>vignette(“ggplot2-specs”, package = “ggplot2”)</p>
+<p>```</p>
+<p>FROM TUTORIAL #2</p>
+<p>R Basics</p>
+<p>Function help is always organised in the same way. For example, look at the help for `?beepr::beep`. At the top, it tells you the name of the function and its package in curly brackets, then a short description of the function, followed by a longer description. The **Usage** section shows the function with all of its `r glossary(“argument”, “arguments”)`. If any of those arguments have default values, they will be shown like `function(arg = default)`. The **Arguments** section lists each argument with an explanation. There may be a **Details** section after this with even more detail about the functions. The **Examples** section is last, and shows examples that you can run in your console window to see how the function works.</p>
+<div class="try callout callout-style-default callout-note callout-titled" style="clear: both;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>## Function Help</p>
+<p>- What is the first argument to the `mean` function? `r mcq(c(“trim”, “na.rm”, “mean”, answer=“x”))`</p>
+<p>- What package is `read_excel` in? `r mcq(c(“readr”, answer=“readxl”, “base”, “stats”))`</p>
+</div>
+</div>
+<p>### Arguments</p>
+<p>You can look up the arguments/options that a function has by using the help documentation. Some arguments are required, and some are optional. Optional arguments will often use a default (normally specified in the help documentation) if you do not enter any value.</p>
+<p>As an example, look at the help documentation for the function `sample()` which randomly samples items from a list.</p>
+<p>```{r help-doc, eval=FALSE, filename = “Run in the console”}</p>
+<p>?sample</p>
+<p>```</p>
+<p>The help documentation for `sample()` should appear in the bottom right help panel. In the usage section, we see that `sample()` takes the following form:</p>
+<p>```{r arguments, eval = FALSE}</p>
+<p>sample(x, size, replace = FALSE, prob = NULL)</p>
+<p>```</p>
+<p>In the arguments section, there are explanations for each of the arguments. `x` is the list of items we want to choose from, `size` is the number of items we want to choose, `replace` is whether or not each item may be selected more than once, and `prob` gives the probability that each item is chosen. In the details section it notes that if no values are entered for `replace` or `prob` it will use defaults of `FALSE` (each item can only be chosen once) and `NULL` (all items will have equal probability of being chosen). Because there is no default value for `x` or `size`, they must be specified otherwise the code won’t run.</p>
+<p>Let’s try an example and just change the required arguments to `x` and `size` to ask R to choose 5 random letters (`letters` is a built-in `r glossary(“vector”)` of the 26 lower-case Latin letters).</p>
+<p>```{r, echo = FALSE}</p>
+<p># make sure values are the same</p>
+<p>set.seed(1242016)</p>
+<p>```</p>
+<p>```{r rnorm-n}</p>
+<p>sample(x = letters, size = 5)</p>
+<p>```</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>## Why are my letters different to your letters?</p>
+<p>`sample()` generates a random sample. Each time you run the code, you’ll generate a different set of random letters (try it). The function `set.seed()` controls the random number generator - if you’re using any functions that use randomness (such as `sample()`), running `set.seed()` will ensure that you get the same result (in many cases this may not be what you want to do). To get the same numbers we do, run `set.seed(1242016)` in the console, and then run `sample(x = letters, size = 5)` again.</p>
+</div>
+</div>
+</div>
+<p>Now we can change the default value for the `replace` argument to produce a set of letters that is allowed to have duplicates.</p>
+<p>```{r}</p>
+<p>set.seed(8675309)</p>
+<p>sample(x = letters, size = 5, replace = TRUE)</p>
+<p>```</p>
+<p>This time R has still produced 5 random letters, but now this set of letters has two instances of “k”. Always remember to use the help documentation to help you understand what arguments a function requires.</p>
+<p>### Argument names</p>
+<p>In the above examples, we have written out the argument names in our code (i.e., `x`, `size`, `replace`), however, this is not strictly necessary. The following two lines of code would both produce the same result (although each time you run `sample()` it will produce a slightly different result, because it’s random, but they would still work the same):</p>
+<p>```{r argument-names, eval = FALSE}</p>
+<p>sample(x = letters, size = 5, replace = TRUE)</p>
+<p>sample(letters, 5, TRUE)</p>
+<p>```</p>
+<p>Importantly, if you do not write out the argument names, R will use the default order of arguments. That is, for `sample` it will assume that the first value you enter is `x`, the second value is `size` and the third value is `replace`.</p>
+<p>If you write out the argument names, then you can write the arguments in whatever order you like:</p>
+<p>```{r argument-order, eval = FALSE}</p>
+<p>sample(size = 5, replace = TRUE, x = letters)</p>
+<p>```</p>
+<p>When you are first learning R, you may find it useful to write out the argument names as it can help you remember and understand what each part of the function is doing. However, as your skills progress you may find it quicker to omit the argument names and you will also see code examples online that do not use argument names, so it is important to be able to understand which argument each bit of code is referring to (or look up the help documentation to check).</p>
+<p>In this course, we will always write out the argument names the first time we use each function. However, in subsequent uses they may be omitted.</p>
+<p>### Tab auto-complete</p>
+<p>One very useful feature of R Studio is tab auto-complete for functions. If you write the name of the function and then press the tab key, R Studio will show you the arguments that function takes along with a brief description. If you press enter on the argument name it will fill in the name for you, just like auto-complete on your phone. This is incredibly useful when you are first learning R and you should remember to use this feature frequently.</p>
+<p>```{r fig-autocomplete, echo=FALSE, fig.cap=“Tab auto-complete”}</p>
+<p>#knitr::include_graphics(“images/intro/autocomplete.png”)</p>
+<p>```</p>
+<p>## Objects {#sec-objects}</p>
+<p>A large part of your coding will involve creating and manipulating objects. Objects contain stuff. That stuff can be numbers, words, or the result of operations and analyses. You assign content to an object using `&lt;-`.</p>
+<p>Run the following code in the console, but change the values of `name` and `age` to your own details and change `christmas` to a holiday or date you care about.</p>
+<p>```{r objects, filename = “Run in the console”}</p>
+<p>name &lt;- “Emily”</p>
+<p>age &lt;- 36</p>
+<p>today &lt;- Sys.Date()</p>
+<p>christmas &lt;- as.Date(“2023-12-25”)</p>
+<p>```</p>
+<p>You’ll see that four objects now appear in the environment pane:</p>
+<p>- `name` is `r glossary(“character”)` (text) data. In order for R to recognise it as text, it **must** be enclosed in double quotation marks `” “`.</p>
+<p>- `age` is `r glossary(“numeric”)` data. In order for R to recognise this as a number, it **must not** be enclosed in quotation marks.</p>
+<p>- `today` stores the result of the function `Sys.Date()`. This function returns your computer system’s date. Unlike `name` and `age`, which are hard-coded (i.e., they will always return the values you enter), the contents of the object `today` will change dynamically with the date. That is, if you run that function tomorrow, it will update the date to tomorrow’s date.</p>
+<p>- `christmas` is also a date but it’s hard-coded as a specific date. It’s wrapped within the `as.Date()` function that tells R to interpret the character string you provide as a date rather than text.</p>
+<div class="try callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To print the contents of an object, type the object’s name in the console and press enter. Try printing all four objects now.</p>
+</div>
+</div>
+<p>Finally, a key concept to understand is that objects can interact and you can save the results of those interactions in new object. Edit and run the following code to create these new objects, and then print the contents of each new object.</p>
+<p>```{r intro-objects, filename = “Run in the console”}</p>
+<p>decade &lt;- age + 10</p>
+<p>full_name &lt;- paste(name, “Nordmann”)</p>
+<p>how_long &lt;- christmas - today</p>
+<p>```</p>
+<p>## Getting help {#sec-help}</p>
+<p>You will feel like you need a *lot* of help when you’re starting to learn. This won’t really go away; it’s impossible to memorise everything. The goal is to learn enough about the structure of R that you can look things up quickly. This is why we’ll introduce specialised jargon in the glossary for each chapter; it’s easier to google “convert `r glossary(”character”)` to `r glossary(“numeric”)` in R” than “make numbers in quotes be actual numbers not words”. In addition to the function help described above, here’s some additional resources you should use often.</p>
+<p>### Package reference manuals</p>
+<p>Start up help in a browser by entering `help.start()` in the console. Click on &lt;if&gt;Packages&lt;/if&gt; under &lt;if&gt;Reference&lt;/if&gt; to see a list of packages. Scroll down to the &lt;pkg&gt;readxl&lt;/pkg&gt; package and click on it to see a list of the functions that are available in that package.</p>
+<p>### Googling</p>
+<p>If the function help doesn’t help, or you’re not even sure what function you need, try Googling your question. It will take some practice to be able to use the right jargon in your search terms to get what you want. It helps to put “R” or “tidyverse” in the search text, or the name of the relevant package, like “ggplot2”.</p>
+<p>### Vignettes</p>
+<p>Many packages, especially [tidyverse](https://www.tidyverse.org/packages/){target=“_blank”} ones, have helpful websites with vignettes explaining how to use their functions. Some of the vignettes are also available inside R. You can access them from a package’s help page or with the `vignette()` function.</p>
+<p>```{r, eval = FALSE, filename = “Run in the console”}</p>
+<p># opens a list of available vignettes</p>
+<p>vignette(package = “ggplot2”)</p>
+<p># opens a specific vignette in the Help pane</p>
+<p>vignette(“ggplot2-specs”, package = “ggplot2”)</p>
+<p>```</p>
+<p>## Coding Etiquette</p>
+<p>https://bookdown.org/daniel_dauber_io/r4np_book/r-basics-the-very-fundamentals.html</p>
+<p>Now you know everything to get started, but before we jump into our first project, I would like to briefly touch upon coding etiquette. This is not something that improves your analytical or coding skills directly, but is essential in building good habbits and making your life and those of others a little easier. Consider writing code like growing plants in your garden. You want to nurture the good plants, remove the weed and add labels that tell you which plant it is that you are growing. At the end of the day, you want your garden to be well-maintained. Treat you programming code the same way.</p>
+<p>A script (see Chapter 6.3) of programming code should always have at least the following qualities:</p>
+<p>Only contains code that is necessary,</p>
+<p>Is easy to read and understand,</p>
+<p>Is self-contained.</p>
+<p>With simple code this is easily achieved. However, what about more complex and longer code representing a whole set of analytical steps?</p>
+<p>```{r}</p>
+<p># Very messy code</p>
+<p>library(tidyverse)</p>
+<p>library(jtools)</p>
+<p>model1 &lt;- lm(covid_cases_per_1m ~ idv, data = df)</p>
+<p>summ(model1, scale = TRUE, transform.response = TRUE, vifs = TRUE)</p>
+<p>df %&gt;% ggplot(aes(x = covid_cases_per_1m, y = idv, col = europe, label = country))+</p>
+<p>theme_minimal()+ geom_label(nudge_y = 2) + geom_point()</p>
+<p>model2 &lt;- lm(cases_per_1m ~ idv + uai + idv*europe + uai*europe, data = df)</p>
+<p>summ(model2, scale = TRUE, transform.response = TRUE, vifs = TRUE)</p>
+<p>anova(model1, model2)</p>
+<p>```</p>
+<p>How about the following in comparison?</p>
+<p>```{r}</p>
+<p># Nicely structured code</p>
+<p># Load required R packages</p>
+<p>library(tidyverse)</p>
+<p>library(jtools)</p>
+<p># ---- Modelling COVID-19 cases ----</p>
+<p>## Specify and run a regression</p>
+<p>model1 &lt;- lm(covid_cases_per_1m ~ idv, data = df)</p>
+<p>## Retrieve the summary statistics of model1</p>
+<p>summ(model1,</p>
+<p>scale = TRUE,</p>
+<p>transform.response = TRUE,</p>
+<p>vifs = TRUE)</p>
+<p># Does is matter whether a country lies in Europe?</p>
+<p>## Visualise rel. of covid cases, idv and being a European country</p>
+<p>df %&gt;%</p>
+<p>ggplot(aes(x = covid_cases_per_1m,</p>
+<p>y = idv,</p>
+<p>col = europe,</p>
+<p>label = country)) +</p>
+<p>theme_minimal() +</p>
+<p>geom_label(nudge_y = 2) +</p>
+<p>geom_point()</p>
+<p>## Specify and run a revised regression</p>
+<p>model2 &lt;- lm(cases_per_1m ~ idv + uai + idv*europe + uai*europe,</p>
+<p>data = df)</p>
+<p>## Retrieve the summary statistics of model2</p>
+<p>summ(model2,</p>
+<p>scale = TRUE,</p>
+<p>transform.response = TRUE,</p>
+<p>vifs = TRUE)</p>
+<p>## Test whether model2 is an improvement over model1</p>
+<p>anova(model1, model2)</p>
+<p>```</p>
+<p>I hope we can agree that the second example is much easier to read and understand even though you probably do not understand most of it yet. For once, I separated the different analytical steps from each other like paragraphs in a report. Apart from that, I added comments with # to provide more context to my code for someone else who wants to understand my analysis. Admittedly, this example is a little excessive. Usually, you might have fewer comments. Commenting is an integral part of programming because it allows you to remember what you did. Ideally, you want to strike a good balance between commenting on and writing your code. How many comments you need will likely change throughout your R programming journey. Think of comments as headers for your programming script that give it structure.</p>
+<p>We can use # not only to write comments but also to tell R not to run particular code. This is very helpful if you want to keep some code but do not want to use it yet. There is also a handy keyboard shortcut you can use to ‘deactivate’ multiple lines of code at once. Select whatever you want to ‘comment out’ in your script and press Ctrl+Shift+C (PC) or Cmd+Shift+C (Mac).</p>
+<p>```{r}</p>
+<p># mean(pocket_money) # R will NOT run this code</p>
+<p>mean(pocket_money) # R will run this code</p>
+<p>```</p>
+<p>RStudio helps a lot with keeping your coding tidy and properly formatted. However, there are some additional aspects worth considering. If you want to find out more about coding style, I highly recommend to read through ‘The tidyverse style guide’ (Wickham, 2021).</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
