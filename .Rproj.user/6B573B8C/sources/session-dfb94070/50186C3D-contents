@@ -1,0 +1,201 @@
+---
+editor: visual
+---
+
+# Tutorial #2 {.unnumbered}
+
+In this course, we will be using the R software environment for all our analysis. You will learn R and data analysis techniques simultaneously. This tutorial introduces some basic programming concepts and terminology. Instead of asking you to memorize all these concepts and terminology right now, we will guide you so that you will "learn by doing." To help you learn, we will always use a different font to distinguish regular text from `computer_code`. In this tutorial, we will review the difference between objects and functions, arithmetic and logical operators, the most common data types in R, and explore a simple dataset. The best way to master these topics is, in our opinions, through deliberate practice with R and lots of repetition.
+
+## Intended Learning Outcomes {#sec-ilo-intro}
+
+\* Be able to explain the difference between a data object and a function.
+
+\* Be familiar with the common types of data and data structures in R.
+
+\* Understand how and when to use arithmetic and logical operators in R.
+
+\* Be able to explore a dataset using basic Base R functions.
+
+## Data vs. Functions {#sec-intro-basic_terms}
+
+In R, we first need to grasp the notions of objects and functions. From a task-oriented perspective, using R consists of
+
+1.  creating or loading data (inputs, material, values), and
+2.  calling or evaluating functions (commands, actions, verbs) for
+3.  computing and constructing new data (outputs, images, tables, results).
+
+Confusingly, both data and functions in R are objects (stuff) and evaluating functions typically returns or creates new objects (more stuff). Thus, the process of computation can be viewed as a cycle that uses data (as input) to create more data (as output). Although any part of a program is an object, functions are those objects that do things by processing or performing tasks on data and create new objects. To distinguish data from functions, think of data as *matter* (i.e., material, stuff, or values) that are being measured, manipulated, or processed, and of functions as *procedures* (i.e., actions, operations, or verbs) that measure, manipulate, or process data. Put more succinctly, functions are objects that do things --- they process data into other data.
+
+Although this tutorial addresses data and functions in the context of **base** R, the same distinctions also apply to other packages and languages. In the following, we will introduce some ways to describe data (by *type* and *shape*), learn to create new data objects (by assigning them with `<-`), and apply some pre-defined functions to these data objects. \[and to create new data objects?\]
+
+::: callout-important
+## R Notation
+
+To make it easier to distinguish between *data objects* and *functions*, we will typically add (round) *parentheses* to function names. Thus, `abc()` indicates a function, whereas `abc` indicates a data object. However, keep in mind that there are some R functions that work without parentheses (e.g., arithmetic operators `+` and `*` that are positioned between their arguments).
+:::
+
+## Functions {#sec-intro-functions}
+
+Functions, also called commands, perform tasks in R. They take in inputs called **arguments** and return outputs. Most functions require the user to manually specify a function's arguments. For example, if type `sqrt()` and press Enter/Return, you will get an error message. There are some functions for which the user can either manually specify a function's arguments or use the function's default values. For example, the function `seq()` in R generates a sequence of numbers. If you just run `seq()` it will return the value 1. That doesn't seem very useful! This is because the default arguments are set as `seq(from = 1, to = 1)`. Thus, if you don't pass in different input values for `from` and `to` to change this behavior, R just assumes all you want is the number 1. You can change the argument values by updating the values after the `=` sign. If we try out `seq(from = 2, to = 5)` or alternatively `seq(2:5)`, we will get the result `2 3 4 5` that we might expect.
+
+Over the semester you will get lots of practice working with functions and understanding their behaviors. In addition to the `sqrt()` and the `seq()` functions, we have also used the `install.packages()` and the `library()` functions. There are thousands of functions built into R and even more can be added through packages. These functions do not appear in the workspace because you did not define them, but they are available for immediate use.
+
+## Data Objects {#sec-intro-data}
+
+When formally dealing with data, it makes sense to distinguish between a variable and its values: A variable is a dimension or property that describes a unit of observation (e.g., a person, a school, a country, etc.) and can typically assume different values. By contrast, values are the concrete instantiations that a variable assigns to every unit of observation and are further characterized by their range (e.g., categorical vs. continuous values) and their type (e.g., numeric, character, or logical values). For instance, an individual can be characterized by the variables name, age, and whether or not they are classified as an adult. The values corresponding to these variables would be of type text (e.g., "Lisa"), numeric (e.g., 16, age in years), and logical (TRUE vs. FALSE, defined as a function of age).
+
+### Data Types
+
+To make the best out of the R programming language, a programmer needs a strong understanding of the basic data types and data structures, and how to operate on them.
+
+In R, data is stored in objects that are distinguished by their *type* and by their *shape*:
+
+-   The most common types of data are:
+    -   doubles - for representing all real numbers (whole numbers and decimals, such as -55, 0.75, 5);
+    -   integers - for representing only whole numbers (such as -1, 0, 85, 2568);
+    -   characters - for representing text or string data (such as "apple", "laywer");
+    -   logicals - for representing a variable with only truth values of type logical `TRUE` or `FALSE` (aka. Boolean values);
+    -   time - for representing dates and times;
+-   Other important data type in R include:
+    -   `NA` - Missing values;
+    -   `NaN` - Not a Number e.g. sqrt(-4);
+    -   `Inf` - Infinite values e.g. 5/0.
+
+::: callout-important
+Note that R distinguishes between two numeric data types (integer and double). It defaults to storing numerical data as double. You need to add a `L` after the number to tell R you want the number stored as an integer or use the function `as.integer()`. Keep in mind that unless you tell R something is an integer, it will store it as double. This default behavior is helpful since we will mostly be working with doubles, not integers. In general, you can ignore this distinction but occasionally it comes up so it is good to know it exists. Also note that character data type is declared by enclosing it in double quotation marks. Similarly, R will treat numerical data with double quotation marks as character (text/string) data (e.g., "432.5").
+:::
+
+### Convert data types
+
+https://rpubs.com/STEMResearch/data-types-in-r
+
+There are two functions, `typeof()` and `class()`, that can be applied to any R object to check what type of data object it is. Data types can also be converted from one type to another using the `as._____` functions.
+
+The function `typeof()` can be applied to any R object to check what type of data object it is. Data types can also be converted from one type to another using the `as._____` functions.
+
+| Function       | Description          |
+|:---------------|:---------------------|
+| as.double()    | Convert to double    |
+| as.integer()   | Convert to integer   |
+| as.numeric()   | Convert to numeric   |
+| as.character() | Convert to character |
+| as.logical()   | Convert to logical   |
+| as.complex()   | Convert to complex   |
+
+### Data Shapes
+
+https://bookdown.org/rwnahhas/IntroToR/object-types.html
+
+The shape of an object mostly depends on its structure. A clear understanding of R data structures is crucial since these are the objects you will manipulate on a day-to-day basis in R.
+
+The most common shapes of data are: + scalars are individual elements (e.g., "A", 4, TRUE); + vectors are linear chains or sequences of objects (can be *either* numeric or character but not both); + tables are rectangular data structures with two dimensions (with rows and columns).
+
+There are additional data shapes (e.g., multi-dimensional data structures) and types (e.g., for representing categorical or geographical data), but the ones mentioned here are by far the most important ones.
+
+### Vectors
+
+The main type of object used in R for representing data is a vector. A vector is a column of ***numbers*** or ***character strings*** indexed by the integers 1, 2, ..., n, where n is the length of the vector. Vectors come in different data types and shapes. They can be ***either*** numeric or character but ***not*** both. If you attempt to create a vector with both numeric values and character strings, R will convert the numeric values to character.
+
+We create a vector of numbers and display it like this:
+
+```{r, eval = FALSE, echo = TRUE}
+# this creates a vector of heights, in cm
+heights <- c(203, 148, 156, 158, 167)
+```
+
+The c() command is shorthand for *combine* or *concatenate*, so in the example above we are combining the individual elements (the 5 numbers) into a new vector that is assigned the label *heights* using `<-`, the assignment operator. And we can check the values stored in the variable by asking R to print them. You can either type `print(heights)`, or just write the name of the variable alone `heights`, which will print it by default.
+
+We can also create a vector of text elements:
+
+```{r, eval = FALSE, echo = TRUE}
+# this creates a vector of text 
+names <- c("Ben", "Rosa", "Sue", "Joe", "Lucia")
+```
+
+The quotes around "Ben", "Rosa", etc. are essential here. Without the quotes R will assume there are objects called Ben, Rosa, etc. in the workspace. As these objects don't exist in R's memory, there will be an error message.
+
+Note: If you are using RStudio, they will be stored in our environment located in the top right window.
+
+When simultaneously considering the shape and type of data, we can distinguish and begin to understand data structures.
+
+### Data Structures in R
+
+Data structures are constructs designed to store data. As we mentioned in Section 1.1.3, the data structures of a programming language are similar to the grammatical and spelling rules of natural languages. As long as we reach our goals, we neither care about nor need to know the rules. But whenever unexpected outcomes or errors occur, repairing them in a competent fashion requires considerable background knowledge and experience.
+
+Although the term "data structure" is sometimes used to refer to just the shape of data, understanding the key data structures available in R requires viewing them as a combination of (a) some data shape, and (b) the fact whether they contain a single or multiple types of data.
+
+Table 1.1 provides an overview of the key data structures provided by the designers of R. Note that Table 1.1 distinguishes between three different data shapes (in its rows) and between data structures for "homogeneous" vs. "heterogeneous" data types (in its columns):
+
+## Basic Computation in R {#sec-intro-operations}
+
+The most basic computation you can do in R is arithmetic operations. In other words, addition, subtraction, multiplication, division, exponentiation and extraction of roots. In short, R can be used like your pocket calculator, or more likely the one you have on your phone. We demonstrated this in *Tutorial #1* when we performed some simple computations. As with many calculators, the operators are **`+`** for *addition*, **`-`** for *subtraction*, **`*`** for *multiplication*, **`/`** for *division* and **`^`** for *exponentiation*. Often parentheses are used to clarify the order of operations.
+
+`+` addition
+
+`-` subtraction
+
+`*` multiplication
+
+`/` division
+
+`abs()` absolute value
+
+`x^n` raise x to power of some number n
+
+`sqrt()` square root of a number or variable ( n\^2 does same)
+
+`log()` natural log
+
+`exp()` antilog, exponent of variable or number
+
+`log2()` log of other bases, eg. log base 2
+
+```{r, eval = FALSE, echo = TRUE}
+2 + 2
+```
+
+### Logical Operators
+
+The main difference between arithmetic operators and logical operators is that logical operators are used to make comparisons and will yield a logical (TRUE/FALSE) output. These are really helpful when we want to identify certain qualities about the data.
+
+Below is a list of some common logical operators that can be used on R:
+
+`==` is equal to
+
+`!=` is not equal to
+
+`<` less than
+
+`>` greater than
+
+`<=` less than or equal to
+
+`>=` greater than or equal to
+
+For multiple conditions...
+
+`|` or operator
+
+`&` and operator[^1]
+
+[^1]: <https://methodenlehre.github.io/SGSCLM-R-course/the-r-language.html>
+
+![](https://methodenlehre.github.io/SGSCLM-R-course/figures/transform-logical.png)
+
+Here's a helpful visual about logical operators, x is the left circle, y is the right circle.
+
+Examples of logicals being helpful.
+
+```{r, eval = FALSE}
+# Examples:
+3 == 4 #FALSE, 3 is not equal to 4
+3 != 4 #TRUE, 3 is not equal to 4
+
+"cat" == "cat" #TRUE, this works with strings too "cat" is the same as "cat"
+```
+
+## Exploring a Dataset {#sec-intro-explore_dataset}
+
+Let's put everything we've learned so far into practice and start exploring some real data! Data comes to us in a variety of formats, from pictures to text to numbers. Throughout this book, we'll focus on datasets that are saved in "spreadsheet"-type format. This is probably the most common way data are collected and saved in many fields. Remember from Subsection 1.2.1 that these "spreadsheet"-type datasets are called data frames in R. We'll focus on working with data saved as data frames throughout this book.
+
+Let's first load all the packages needed for this chapter, assuming you've already installed them. Read Section 1.3 for information on how to install and load R packages if you haven't already.
