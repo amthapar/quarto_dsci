@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://amthapar.github.io/quarto_dsci/about.html</loc>
-    <lastmod>2024-05-29T18:11:54.733Z</lastmod>
+    <lastmod>2024-05-29T18:22:59.189Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amthapar.github.io/quarto_dsci/chapter2.html</loc>
+    <lastmod>2024-05-29T18:23:01.625Z</lastmod>
   </url>
   <url>
     <loc>https://amthapar.github.io/quarto_dsci/index.html</loc>
-    <lastmod>2024-05-29T18:11:56.770Z</lastmod>
+    <lastmod>2024-05-29T18:23:03.965Z</lastmod>
   </url>
 </urlset>
